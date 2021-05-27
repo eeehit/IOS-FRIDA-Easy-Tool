@@ -37,7 +37,6 @@ IOS의 Application을 진단할 때 FRIDA를 사용하게 되는데, 이 과정�
 ![1](https://user-images.githubusercontent.com/38906956/119836382-aad59880-bf3c-11eb-86c3-d6a1435651d9.png)
 
 ## Enumerator
----
 Enumerator에서는 아래 3가지 기능을 제공한다.
 1. Application에 포함된 <b>Class의 목록</b>을 읽어온다.
 2. 특정 <b>Class에 포함된 Method 목록</b>을 읽어온다.
@@ -45,29 +44,24 @@ Enumerator에서는 아래 3가지 기능을 제공한다.
 <br></br>
 
 ## Script Loader
----
 Script Loader는 특정 Script를 Application에 주입해 그 결과를 로그창을 통해 확인할 수 있다. 매번 Editor를 사용해 스크립트를 작성하고 CMD창에서 FRIDA 명령어를 사용해 주입해야하는 번거로움을 해결할 수 있다.
 <br></br>
 
 ## Hook Implement
----
 Class & Method 이름을 통해 대상 API를 지정하고, 해당 <b>API를 Hooking해 원하는 함수를 대신 호출하도록 조작</b>할 수 있다.
 <br></br>
 
 ## Interceptor
----
 Interceptor에서는 아래 2가지 기능을 제공한다.
 1. <b>Class & Method 이름 혹은 Offset</b>을 통해 대상 API가 호출될 때 Parameter&Call Stack&Return value 를 확인할 수 있다. <b>(Log)</b>
 2. <b>Class & Method 이름 혹은 Offset</b>을 통해 대상 API가 호출될 때 Parameter&Return value를 변조할 수 있다. <b>(Replace)</b>
 <br></br>
 
 ## Debugger
----
 <b>Address(Offset)을 입력하고 추가할 경우 Break Point가 설정</b>되고, Application이 진행되면서 해당 Address의 명령어가 호출될 경우 Application이 멈춘다. 이 때 <b>Register 정보를 확인할 수 있고 이를 변조</b>할 수도 있다.
 <br></br>
 
 ## Memory
----
 Memory에서는 아래 5가지 기능을 제공한다.
 1. Memory Maps를 통해 현재 프로세스에서 사용중인 메모리영역의 Start Address&Size를 확인할 수 있다.
 2. <b>선택한 메모리 영역에서 String & Hex 값을 탐색</b>할 수 있다.
@@ -77,7 +71,6 @@ Memory에서는 아래 5가지 기능을 제공한다.
 <br></br>
 
 ## API Trace
----
 <b>Trace할 API목록을 입력하고, Application을 사용하게 되면 해당 API가 호출될 때 Parameter & Call Stack & Return value를 확인</b>할 수 있다. Trace할 API목록은 `*[ClassName* *]` 와 같이 와일드카드를 사용해 작성할 수 있다.
 
 이를 통해 특정 기능을 동작시켰을 때 호출되는 API를 추적할 수 있다.
